@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block main_content %}
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <div class="col-md-8">
+
+            <table class="table table-bordered table-striped table-light">
+
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                </tr>
+                {% for show_post in posts%}
+                <tr>
+
+                    <td>{{ show_post.title}}</td>
+                    <td>{{ show_post.body }}</td>
+                    <td>{{ show_post.categories }}</td>
+
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
